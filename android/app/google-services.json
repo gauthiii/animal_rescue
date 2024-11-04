@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1015343371386",
+    "project_id": "freelance-projects-785eb",
+    "storage_bucket": "freelance-projects-785eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015343371386:android:19ab44c27c4a4a2879d7c3",
+        "android_client_info": {
+          "package_name": "com.example.animal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTIHyHp9B7vISi2Y7NO2YdU_JHvyt0sGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015343371386:android:d30f9536fe12fbad79d7c3",
+        "android_client_info": {
+          "package_name": "com.gauthiii.findplaylist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTIHyHp9B7vISi2Y7NO2YdU_JHvyt0sGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
