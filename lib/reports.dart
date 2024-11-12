@@ -28,7 +28,7 @@ class ReportScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: DataTable(
               columns: const [
-                DataColumn(label: Text('S.No')),
+                DataColumn(label: Text('S. No')),
                 DataColumn(label: Text('Date & Time')),
                 DataColumn(label: Text('Location')),
                 DataColumn(label: Text('Urgency Level')),
