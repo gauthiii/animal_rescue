@@ -1,5 +1,6 @@
 import 'package:animal/pets.dart';
 import 'package:animal/profile.dart';
+import 'package:animal/reports.dart';
 import 'package:animal/upload.dart';
 import 'package:animal/yolo.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
@@ -160,6 +161,23 @@ class _Ds extends State<Dashboard> {
                         );
                       },
                       child: const Text('Yolo Model',style: TextStyle(color: Color.fromARGB(255, 219, 153, 106),fontSize: 17),),
+                    ),
+                    const SizedBox(height: 10),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+
+                        minimumSize: Size.fromHeight(60),
+                        backgroundColor: Colors.black,
+                        
+                      
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ReportScreen()),
+                        );
+                      },
+                      child: const Text('My Reports',style: TextStyle(color: Color.fromARGB(255, 219, 153, 106),fontSize: 17),),
                     ),
                     const SizedBox(height: 10),
                 

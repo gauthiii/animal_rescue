@@ -35,6 +35,11 @@ class _ObjectDetectionScreenState extends State<ObjectDetectionScreen> {
   }
 
   Future<void> detectObjects(File image) async {
+
+     setState(() {
+      _loading = true;
+    });
+
     final rawImage = img.decodeImage(image.readAsBytesSync());
     final resizedImage = img.copyResize(rawImage!, width: 640, height: 640);
 
@@ -91,6 +96,9 @@ class _ObjectDetectionScreenState extends State<ObjectDetectionScreen> {
       _isInjuredDetected = injuredDetected;
       print("Injured detected: $_isInjuredDetected");
     });
+
+   
+
 
     return detections;
   }
@@ -181,11 +189,16 @@ class _ObjectDetectionScreenState extends State<ObjectDetectionScreen> {
                       child: Text("Select an image to detect objects"),
                     ),
                   ),
+                  _loading
+          ? Center(child: CircularProgressIndicator())
+          :
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: ElevatedButton(
                     onPressed: pickImage,
-                    child: Text("Pick Image from Gallery"),
+                    child:   _loading
+          ? Center(child: CircularProgressIndicator())
+          : Text("Pick Image from Gallery"),
                   ),
                 ),
                 if (_detections.isNotEmpty)
@@ -197,7 +210,7 @@ class _ObjectDetectionScreenState extends State<ObjectDetectionScreen> {
                     ),
                   ),
 
-                   if (_detections.isEmpty)
+                   if (_detections.isEmpty && _image != null)
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Text(
