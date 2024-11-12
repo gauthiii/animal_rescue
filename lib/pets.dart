@@ -45,7 +45,11 @@ class AnimalListScreen extends StatelessWidget {
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text('Animal: ${alertData['animal']}'),
-                      Text('Location: ${alertData['location']}'),
+          Text(
+  'Location: ${(alertData.data() as Map<String, dynamic>).containsKey('location') ? alertData['location'] : alertData['locationName']}',
+),
+
+
                       Text('Urgency Level: ${alertData['urgencyLevel']}'),
                       const SizedBox(height: 4),
                       Text(
